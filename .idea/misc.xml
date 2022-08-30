@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_main_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_register_gp.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_register_insurance.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_register_user.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_reset_password.xml" value="0.16757246376811594" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_user.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_view_details.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_view_gpdetails.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/miche/AndroidStudioProjects/Medi-Check/app/src/main/res/layout/activity_view_insurance_details.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/miche/Downloads/MediCheckApp/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/miche/Downloads/MediCheckApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/miche/Downloads/MediCheckApp/app/src/main/res/layout/activity_main_menu.xml" value="0.36666666666666664" />

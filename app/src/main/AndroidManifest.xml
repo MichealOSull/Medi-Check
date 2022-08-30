@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheckApp">
         <activity
+            android:name=".ViewInsuranceDetails"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterInsurance"
+            android:exported="false" />
+        <activity
+            android:name=".ViewGPDetails"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterGP"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDetails"
+            android:exported="false" />
+        <activity
             android:name=".MainMenu"
             android:exported="false" />
         <activity
