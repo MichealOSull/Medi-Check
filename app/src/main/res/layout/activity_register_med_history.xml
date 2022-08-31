@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterMedHistory">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medichecklogo" />
+
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="298dp"
+        android:layout_height="26dp"
+        android:text="Please Enter Your Medical History Below"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.283" />
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:text="Gender:"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
+
+
+    <RadioGroup
+        android:id="@+id/genderOption"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genderText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMessage"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/genderOption2"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="Male"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="266dp" />
+
+        <RadioButton
+            android:id="@+id/genderOption3"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="Female"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="224dp"
+            tools:layout_editor_absoluteY="265dp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="220dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:hint="Weight (Kgs)"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.557" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="220dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:hint="Height (Cm)"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <TextView
+        android:id="@+id/diabeticText"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:text="Diabetic:"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626" />
+
+    <RadioGroup
+        android:id="@+id/diabeticOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/asthmaticOption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/diabeticText"
+        app:layout_constraintTop_toBottomOf="@+id/weight">
+
+        <RadioButton
+            android:id="@+id/diabeticOption2"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="Yes"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/diabeticOption3"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="No"
+            android:textSize="14dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/asthmaticText"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:text="Asthmatic:"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.712" />
+
+    <RadioGroup
+        android:id="@+id/asthmaticOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="171dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/asthmaticText"
+        app:layout_constraintTop_toBottomOf="@+id/diabeticOption">
+
+        <RadioButton
+            android:id="@+id/asthmaticOption2"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="Yes"
+            android:textSize="14dp" />
+
+        <RadioButton
+            android:id="@+id/asthmaticOption3"
+            android:layout_width="90dp"
+            android:layout_height="20dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:text="No"
+            android:textSize="14dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/registerMedHistory"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="#6fc597"
+        android:text="Register Details"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="208dp"
+        android:backgroundTint="#6fc597"
+        android:text="Cancel"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

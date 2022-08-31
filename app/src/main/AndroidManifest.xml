@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCheckApp">
         <activity
+            android:name=".RegisterReview"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewList"
+            android:exported="false" />
+        <activity
+            android:name=".ViewSupport"
+            android:exported="false" />
+        <activity
+            android:name=".AddedMedHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Maintenance"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterMedHistory"
+            android:exported="false" />
+        <activity
             android:name=".ViewInsuranceDetails"
             android:exported="false" />
         <activity
@@ -38,7 +56,11 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

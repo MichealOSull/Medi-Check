@@ -20,7 +20,8 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Button viewDetails, registerGp, viewGPDetails, registerInsurance, viewInsuranceDetails;
+        Button viewDetails, registerGp, viewGPDetails, registerInsurance, viewInsuranceDetails,
+                registerMedHistory, paymentMedCoin, medPredict, supportButton, reviewButton;
 
         viewDetails = findViewById(R.id.viewDetails);
         viewDetails.setOnClickListener(this);
@@ -32,6 +33,17 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         registerInsurance.setOnClickListener(this);
         viewInsuranceDetails = findViewById(R.id.viewInsuranceDetails);
         viewInsuranceDetails.setOnClickListener(this);
+        registerMedHistory = findViewById(R.id.registerMedHistory);
+        registerMedHistory.setOnClickListener(this);
+        paymentMedCoin = findViewById(R.id.paymentMedCoin);
+        paymentMedCoin.setOnClickListener(this);
+        medPredict = findViewById(R.id.medPredict);
+        medPredict.setOnClickListener(this);
+        supportButton = findViewById(R.id.supportButton);
+        supportButton.setOnClickListener(this);
+        reviewButton = findViewById(R.id.reviewButton);
+        reviewButton.setOnClickListener(this);
+
 
         logout = (Button) findViewById(R.id.signOut);
         logout.setOnClickListener(new View.OnClickListener(){
@@ -62,6 +74,21 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         }
         if (view.getId() == R.id.viewInsuranceDetails) {
             startActivity(new Intent(MainMenu.this, ViewInsuranceDetails.class));
+        }
+        if (view.getId() == R.id.registerMedHistory) {
+            startActivity(new Intent(MainMenu.this, RegisterMedHistory.class));
+        }
+        if (view.getId() == R.id.paymentMedCoin) {
+            startActivity(new Intent(MainMenu.this, Maintenance.class));
+        }
+        if (view.getId() == R.id.medPredict) {
+            startActivity(new Intent(MainMenu.this, Maintenance.class));
+        }
+        if (view.getId() == R.id.supportButton) {
+            startActivity(new Intent(MainMenu.this, ViewSupport.class));
+        }
+        if (view.getId() == R.id.reviewButton) {
+            startActivity(new Intent(MainMenu.this, RegisterReview.class));
         }
     }
 }

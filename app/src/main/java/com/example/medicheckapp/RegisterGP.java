@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterGP extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerGP;
-    private EditText editTextNameGP, editTextEmailGP, editTextNumberGP;
+    private EditText editTextNameGP, editTextEmailGP, editTextNumberGP, editTextAddressGP;
     private FirebaseAuth mAuth;
 
     @Override
@@ -29,12 +29,18 @@ public class RegisterGP extends AppCompatActivity implements View.OnClickListene
 
         mAuth = FirebaseAuth.getInstance();
 
+        Button cancelButton, registerGP;
+
+        cancelButton = findViewById(R.id.cancelButton);
+        cancelButton.setOnClickListener(this);
+
         registerGP = findViewById(R.id.buttonRegisterGP);
         registerGP.setOnClickListener(this);
 
-        editTextNameGP = findViewById(R.id.editTextNameGP);
-        editTextEmailGP = findViewById(R.id.editTextEmailGP);
-        editTextNumberGP = findViewById(R.id.editTextNumberGP);
+        editTextNameGP = findViewById(R.id.gpFullName);
+        editTextEmailGP = findViewById(R.id.gpEmail);
+        editTextNumberGP = findViewById(R.id.gpNumber);
+        editTextAddressGP = findViewById(R.id.gpAddress);
 
     }
 
@@ -43,32 +49,42 @@ public class RegisterGP extends AppCompatActivity implements View.OnClickListene
         if (v.getId() == R.id.buttonRegisterGP) {
             registerGP();
         }
+        if (v.getId() == R.id.cancelButton) {
+            startActivity(new Intent(this, MainMenu.class));
+        }
     }
 
     private void registerGP() {
         String name = editTextNameGP.getText().toString().trim();
         String email = editTextEmailGP.getText().toString().trim();
         String number = editTextNumberGP.getText().toString().trim();
+        String address = editTextAddressGP.getText().toString().trim();
 
         if (name.isEmpty()){
-            editTextNameGP.setError("You must enter GP full name!");
+            editTextNameGP.setError("You must enter GP full name");
             editTextNameGP.requestFocus();
             return;
         }
 
         if(email.isEmpty()){
-            editTextEmailGP.setError("You must enter GP email address!");
+            editTextEmailGP.setError("You must enter GP email address");
             editTextEmailGP.requestFocus();
             return;
         }
 
         if(number.isEmpty()){
-            editTextNumberGP.setError("You must enter GP Phone Number!");
+            editTextNumberGP.setError("You must enter GP Phone Number");
             editTextNumberGP.requestFocus();
             return;
         }
+        if (address.length() > 60) {
+            editTextAddressGP.setError("Address is too big");
+            editTextAddressGP.requestFocus();
+        }
 
-        GP gp = new GP(name, email, number);
+
+
+        GP gp = new GP(name, email, number, address);
         FirebaseDatabase.getInstance().getReference("GP")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .setValue(gp).addOnCompleteListener(new OnCompleteListener<Void>() {

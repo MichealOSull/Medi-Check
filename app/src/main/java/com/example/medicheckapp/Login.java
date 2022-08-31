@@ -33,12 +33,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button loginButton, resetButton;
+        Button loginButton, resetButton, registerButton;
 
         loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
         resetButton = findViewById(R.id.resetButton);
         resetButton.setOnClickListener(this);
+        registerButton = findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
@@ -49,14 +51,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     //onClick method
     public void onClick(View v) {
-        //Switch statement to determine what action to take depending on what is clicked
-        //If register is clicked, redirect to register activity
         if (v.getId() == R.id.loginButton) {
             signIn();
         }
         if (v.getId() == R.id.resetButton) {
             startActivity(new Intent(this, ResetPassword.class));
         }
+        if (v.getId() == R.id.registerButton) {
+            startActivity(new Intent(this, RegisterUser.class));
+        }
+
 
     }
 

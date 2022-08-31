@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ViewInsuranceDetails extends AppCompatActivity {
+public class ViewInsuranceDetails extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseUser insurance;
     private DatabaseReference reference;
@@ -31,13 +31,19 @@ public class ViewInsuranceDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_insurance_details);
 
+        Button goBackButton;
+
+        goBackButton = findViewById(R.id.goBackButton);
+        goBackButton.setOnClickListener(this);
+
         insurance = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Insurance");
         insuranceID = insurance.getUid();
 
-        final TextView textViewName = findViewById(R.id.textViewName);
-        final TextView textViewEmail = findViewById(R.id.textViewEmail);
-        final TextView textViewPhone = findViewById(R.id.textViewPhone);
+        final TextView textViewName = findViewById(R.id.insuranceName);
+        final TextView textViewEmail = findViewById(R.id.emailAddress);
+        final TextView textViewPhone = findViewById(R.id.insurancePhone);
+        final TextView textViewAddress = findViewById(R.id.insuranceAddress);
 
 
         Button callButton = findViewById(R.id.callButton);
@@ -47,7 +53,7 @@ public class ViewInsuranceDetails extends AppCompatActivity {
                 String num = textViewPhone.getText().toString().trim();
                 Uri uri = Uri.parse(num);
                 Intent intent = new Intent(Intent.ACTION_DIAL, uri);
-                intent.setData(Uri.parse("Phone:" + num));
+                intent.setData(Uri.parse("tel:" + num));
                 startActivity(intent);
             }
         });
@@ -55,16 +61,19 @@ public class ViewInsuranceDetails extends AppCompatActivity {
         reference.child(insuranceID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Insurance ins = snapshot.getValue(Insurance.class);
+                Insurance insurance = snapshot.getValue(Insurance.class);
 
-                if(ins != null){
-                    String name = ins.name;
-                    String email = ins.email;
-                    String number = ins.number;
+                if(insurance != null){
+                    String name = insurance.name;
+                    String email = insurance.email;
+                    String number = insurance.number;
+                    String address = insurance.address;
 
                     textViewName.setText(name);
                     textViewEmail.setText(email);
                     textViewPhone.setText(number);
+                    textViewAddress.setText(address);
+
                 }
             }
 
@@ -73,5 +82,12 @@ public class ViewInsuranceDetails extends AppCompatActivity {
                 Toast.makeText(ViewInsuranceDetails.this, "Error!", Toast.LENGTH_LONG).show();
             }
         });
+    }
+    @Override
+    //onClick method
+    public void onClick(View v) {
+        if (v.getId() == R.id.goBackButton) {
+            startActivity(new Intent(this, MainMenu.class));
+        }
     }
 }

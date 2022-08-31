@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Maintenance">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to MediCheck"
+        android:text="Under Maintenance"
         android:textSize="25dp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,54 +34,36 @@
         app:layout_constraintVertical_bias="0.301" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Please select an option below"
-        android:textSize="15dp"
-        android:textStyle="italic"
+        android:layout_width="341dp"
+        android:layout_height="99dp"
+        android:fontFamily="sans-serif"
+        android:text="We would like to apologise, but this page is currently undergoing maintenance to improve our systems, please come back very soon "
+        android:textAlignment="center"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.453" />
 
     <Button
-        android:id="@+id/registerButton"
-        android:layout_width="181dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:text="Register"
+        android:id="@+id/mainMenuButton"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
         android:backgroundTint="#6fc597"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="181dp"
-        android:layout_height="51dp"
-        android:text="Login"
-        android:backgroundTint="#6fc597"
+        android:text="Main Menu"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
+        app:layout_constraintVertical_bias="0.718" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,75 +6,200 @@
     android:layout_height="match_parent"
     tools:context=".ViewDetails">
 
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medichecklogo" />
+
     <TextView
         android:id="@+id/greeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="15dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249" />
+
 
     <TextView
         android:id="@+id/emailAddressTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:textSize="15dp"
+        android:layout_marginStart="28dp"
         android:text="Email Address:"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/greeting"
-        app:layout_constraintLeft_toLeftOf="@+id/greeting"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419" />
 
     <TextView
         android:id="@+id/emailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddressTitle"
-        app:layout_constraintLeft_toLeftOf="@+id/emailAddressTitle"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        android:layout_width="249dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419" />
 
     <TextView
         android:id="@+id/fullNameTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:textSize="15dp"
+        android:layout_marginStart="28dp"
         android:text="Fullname:"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress"
-        app:layout_constraintLeft_toLeftOf="@+id/greeting"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.335" />
 
     <TextView
         android:id="@+id/fullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/fullNameTitle"
-        app:layout_constraintLeft_toLeftOf="@+id/emailAddressTitle"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        android:layout_width="249dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/ageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
         android:text="Age:"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/fullName"
-        app:layout_constraintLeft_toLeftOf="@+id/fullNameTitle"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ageTitle"
-        app:layout_constraintLeft_toLeftOf="@+id/fullNameTitle"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp" />
+        android:layout_width="246dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ppsTitle"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:text="(PPS) Number:"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/pps"
+        android:layout_width="249dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/addressTitle"
+        android:layout_width="103dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:text="Address:"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="249dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="152dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="128dp"
+        android:backgroundTint="#6fc597"
+        android:text="Back"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
 
 
 

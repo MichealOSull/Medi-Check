@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextPPS, editTextAddress;
     private FirebaseAuth mAuth;
 
 
@@ -44,6 +44,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editTextAge = (EditText) findViewById(R.id.age);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
+        editTextPPS = (EditText) findViewById(R.id.PPSNumber);
+        editTextAddress = (EditText) findViewById(R.id.address);
 
     }
 
@@ -64,6 +66,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String fullName = editTextFullName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
+        String pps = editTextPPS.getText().toString().trim();
+        String address = editTextAddress.getText().toString().trim();
 
         if (fullName.isEmpty()) {
             editTextFullName.setError("Full name is required");
@@ -83,7 +87,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-
         if (password.isEmpty()) {
             editTextPassword.setError("Password is required");
             editTextPassword.requestFocus();
@@ -99,7 +102,27 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         if (password.length() < 7) {
             editTextPassword.setError("Password needs min of 7 characters");
             editTextPassword.requestFocus();
+            return;
         }
+
+        if (pps.length() <9) {
+            editTextPPS.setError("PPS needs to be 9 characters");
+            editTextPPS.requestFocus();
+            return;
+        }
+
+        if (pps.length() > 9) {
+            editTextPPS.setError("PPS needs to be 9 characters");
+            editTextPPS.requestFocus();
+            return;
+        }
+
+        if (address.length() > 60) {
+            editTextAddress.setError("Address is too big");
+            editTextAddress.requestFocus();
+            return;
+        }
+
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -107,7 +130,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if (task.isSuccessful()) {
-                        User user = new User(fullName, age, email);
+                        User user = new User(fullName, age, email, pps, address);
 
                         FirebaseDatabase.getInstance().getReference("Users")
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -117,14 +140,14 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
                                 if (task.isSuccessful()) {
                                     Toast.makeText(RegisterUser.this, "User has been registered!", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(RegisterUser.this, Login.class));
 
-                                    //redirect to login!
                                 } else {
                                     Toast.makeText(RegisterUser.this, "Failed to register, try again", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
                     }
-                };
+                }
         });
 }}

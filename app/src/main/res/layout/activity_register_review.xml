@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisterReview">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -18,44 +18,78 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/medichecklogo" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to MediCheck"
-        android:textSize="25dp"
-        android:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Please select an option below"
-        android:textSize="15dp"
+        android:id="@+id/textView2"
+        android:layout_width="298dp"
+        android:layout_height="26dp"
+        android:text="Please Submit a Review Below"
+        android:textAlignment="center"
+        android:textSize="14dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.398" />
+        app:layout_constraintVertical_bias="0.283" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Email: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
+
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="331dp"
+        android:layout_height="188dp"
+        android:ems="10"
+        android:hint="Review"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
-        android:id="@+id/registerButton"
-        android:layout_width="181dp"
+        android:id="@+id/registerMessage"
+        android:layout_width="145dp"
         android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:text="Register"
+        android:layout_marginStart="60dp"
         android:backgroundTint="#6fc597"
+        android:text="Register Message"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="204dp"
+        android:backgroundTint="#6fc597"
+        android:text="Cancel"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,24 +98,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="181dp"
-        android:layout_height="51dp"
-        android:text="Login"
-        android:backgroundTint="#6fc597"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
+        app:layout_constraintVertical_bias="0.788" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

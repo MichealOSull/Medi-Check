@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewGPDetails">
+    tools:context=".ViewSupport">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -18,104 +18,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/medichecklogo" />
 
+
     <TextView
         android:id="@+id/textViewMessage"
-        android:layout_width="215dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="96dp"
-        android:text="Below are the details for your GP "
+        android:layout_width="312dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="48dp"
+        android:text="Below is the contact number of your GP and Insurance. There is also a number for the MediCheck Support Team, please select the specific number you would like to contact."
         android:textAlignment="center"
-        android:textSize="14dp"
+        android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
-
-
-    <TextView
-        android:id="@+id/textViewGPNameTitle"
-        android:layout_width="105dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:text="GP Name: "
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372" />
-
-    <TextView
-        android:id="@+id/GPName"
-        android:layout_width="252dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="144dp"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372" />
-
-    <TextView
-        android:id="@+id/emailAddressTitle"
-        android:layout_width="105dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:text="GP's Email:"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
-
-    <TextView
-        android:id="@+id/emailAddress"
-        android:layout_width="252dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="144dp"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+        app:layout_constraintVertical_bias="0.304" />
 
     <TextView
         android:id="@+id/gpPhoneTitle"
-        android:layout_width="105dp"
+        android:layout_width="122dp"
         android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:text="GP's Number:"
-        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:text="GP Number:"
+        android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.465" />
 
     <TextView
-        android:id="@+id/GPPhone"
+        android:id="@+id/gpPhone"
         android:layout_width="252dp"
         android:layout_height="35dp"
-        android:layout_marginStart="144dp"
-        android:textSize="15dp"
+        android:layout_marginStart="152dp"
+        android:autoLink="phone"
+        android:textSize="13dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -123,30 +64,63 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.465" />
 
     <TextView
-        android:id="@+id/GPAddressTitle"
-        android:layout_width="103dp"
+        android:id="@+id/insurancePhoneTitle"
+        android:layout_width="122dp"
         android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:text="GP Address:"
-        android:textSize="15dp"
+        android:layout_marginStart="20dp"
+        android:text="Insurance Number:"
+        android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintVertical_bias="0.514" />
+
+    <TextView
+        android:id="@+id/insurancePhone"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:autoLink="phone"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
 
 
     <TextView
-        android:id="@+id/GPaddress"
-        android:layout_width="251dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="144dp"
-        android:textSize="15dp"
+        android:id="@+id/mediCheckSupport"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:text="Medi-Check Support:"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566" />
+
+    <TextView
+        android:id="@+id/mediCheckNumber"
+        android:layout_width="252dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="152dp"
+        android:autoLink="phone"
+        android:text="021 4123456"
+        android:textSize="13dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -154,30 +128,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.566" />
+
+
 
     <Button
-        android:id="@+id/callButton"
+        android:id="@+id/goBackButton"
         android:layout_width="145dp"
         android:layout_height="51dp"
-        android:layout_marginStart="52dp"
-        android:backgroundTint="#6fc597"
-        android:text="Call"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="145dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="216dp"
+        android:layout_marginStart="132dp"
         android:backgroundTint="#6fc597"
         android:text="Back"
         android:textColor="#ffffff"
@@ -188,7 +147,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintVertical_bias="0.722" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
