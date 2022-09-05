@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -17,12 +20,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ReviewList extends AppCompatActivity {
+public class ReviewList extends AppCompatActivity implements View.OnClickListener {
 
     RecyclerView recyclerView;
     DatabaseReference reference;
     MyAdapter myAdapter;
     ArrayList<Review> list;
+    Button mainMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +37,12 @@ public class ReviewList extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Review");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this,list);
         recyclerView.setAdapter(myAdapter);
+
+        mainMenu = findViewById(R.id.mainMenuButton);
+        mainMenu.setOnClickListener(this);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -58,6 +64,15 @@ public class ReviewList extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    //onClick method
+    public void onClick(View v) {
+
+        if (v.getId() == R.id.mainMenuButton) {
+            startActivity(new Intent(this, MainMenu.class));
+        }
     }
 
 }

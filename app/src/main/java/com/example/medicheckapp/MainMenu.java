@@ -21,7 +21,7 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_main_menu);
 
         Button viewDetails, registerGp, viewGPDetails, registerInsurance, viewInsuranceDetails,
-                registerMedHistory, paymentMedCoin, medPredict, supportButton, reviewButton;
+                registerMedHistory, paymentMedCoin, medPredict, supportButton, reviewButton, viewReviews;
 
         viewDetails = findViewById(R.id.viewDetails);
         viewDetails.setOnClickListener(this);
@@ -43,6 +43,8 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         supportButton.setOnClickListener(this);
         reviewButton = findViewById(R.id.reviewButton);
         reviewButton.setOnClickListener(this);
+        viewReviews = findViewById(R.id.viewReviews);
+        viewReviews.setOnClickListener(this);
 
 
         logout = (Button) findViewById(R.id.signOut);
@@ -89,6 +91,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         }
         if (view.getId() == R.id.reviewButton) {
             startActivity(new Intent(MainMenu.this, RegisterReview.class));
+        }
+        if (view.getId() == R.id.viewReviews) {
+            startActivity(new Intent(MainMenu.this, ReviewList.class));
         }
     }
 }

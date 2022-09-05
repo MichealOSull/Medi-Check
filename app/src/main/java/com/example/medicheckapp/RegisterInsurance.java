@@ -61,19 +61,19 @@ public class RegisterInsurance extends AppCompatActivity implements View.OnClick
         String address = editTextAddressInsurance.getText().toString().trim();
 
         if (name.isEmpty()){
-            editTextNameInsurance.setError("You must enter GP full name!");
+            editTextNameInsurance.setError("You must enter Insurance Company");
             editTextNameInsurance.requestFocus();
             return;
         }
 
         if(email.isEmpty()){
-            editTextEmailInsurance.setError("You must enter GP email address!");
+            editTextEmailInsurance.setError("You must enter Insurer email address!");
             editTextEmailInsurance.requestFocus();
             return;
         }
 
         if(number.isEmpty()){
-            editTextNumberInsurance.setError("You must enter GP Phone Number!");
+            editTextNumberInsurance.setError("You must enter Insurer Phone Number!");
             editTextNumberInsurance.requestFocus();
             return;
         }

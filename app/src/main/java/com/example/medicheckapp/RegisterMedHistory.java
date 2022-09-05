@@ -72,6 +72,7 @@ public class RegisterMedHistory extends AppCompatActivity implements View.OnClic
         asthmaticButton = findViewById(asthmaticChoice);
         String asthmatic = asthmaticButton.getText().toString();
 
+
         if(weight.isEmpty()){
             editTextWeight.setError("Please enter your weight");
             editTextWeight.requestFocus();

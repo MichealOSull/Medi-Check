@@ -21,9 +21,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="298dp"
-        android:layout_height="26dp"
-        android:text="Please Submit a Review Below"
+        android:layout_width="349dp"
+        android:layout_height="41dp"
+        android:text="Please Submit a Review Below. \n Users can remain anonymous by entering a username."
         android:textAlignment="center"
         android:textSize="14dp"
         android:textStyle="italic"
@@ -38,11 +38,11 @@
 
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/username"
         android:layout_width="327dp"
         android:layout_height="51dp"
         android:ems="10"
-        android:hint="Email: "
+        android:hint="Username: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -58,6 +58,7 @@
         android:ems="10"
         android:hint="Review"
         android:inputType="textMultiLine"
+        android:gravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintLeft_toLeftOf="parent"

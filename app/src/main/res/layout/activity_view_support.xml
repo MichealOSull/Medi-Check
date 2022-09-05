@@ -21,10 +21,10 @@
 
     <TextView
         android:id="@+id/textViewMessage"
-        android:layout_width="312dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="48dp"
-        android:text="Below is the contact number of your GP and Insurance. There is also a number for the MediCheck Support Team, please select the specific number you would like to contact."
+        android:layout_width="328dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="36dp"
+        android:text="Below is the contact number of your GP and Insurance. \n There is also a number for the MediCheck Support Team, please select the specific number you would like to contact."
         android:textAlignment="center"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintVertical_bias="0.311" />
 
     <TextView
         android:id="@+id/gpPhoneTitle"
@@ -119,7 +119,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="152dp"
         android:autoLink="phone"
-        android:text="021 4123456"
+        android:text="0214123456"
         android:textSize="13dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

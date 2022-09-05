@@ -32,8 +32,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Review review = list.get(position);
-        holder.email.setText(review.getEmail());
-        holder.message.setText(review.getMessage());
+        holder.username.setText(review.username);
+        holder.message.setText(review.message);
 
 
 
@@ -41,18 +41,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return list.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView email,message;
+        TextView username,message;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
-
-            email = itemView.findViewById(R.id.reviewEmail);
+            username = itemView.findViewById(R.id.reviewUsername);
             message = itemView.findViewById(R.id.reviewMessage);
         }
     }

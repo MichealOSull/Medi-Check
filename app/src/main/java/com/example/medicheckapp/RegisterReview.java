@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterReview extends AppCompatActivity implements View.OnClickListener {
 
     private TextView registerMessage;
-    private EditText emailR, messageR;
+    private EditText usernameR, messageR;
     private FirebaseAuth mAuth;
 
     @Override
@@ -36,8 +37,8 @@ public class RegisterReview extends AppCompatActivity implements View.OnClickLis
         cancel = findViewById(R.id.cancelButton);
         cancel.setOnClickListener(this);
 
-        emailR = (EditText) findViewById(R.id.email);
-        messageR = (EditText) findViewById(R.id.message);
+        usernameR = findViewById(R.id.username);
+        messageR = findViewById(R.id.message);
     }
 
 
@@ -53,19 +54,32 @@ public class RegisterReview extends AppCompatActivity implements View.OnClickLis
         }
     }
 
+
     public void registerMessage(){
-        String email = emailR.getText().toString().trim();
+        String username = usernameR.getText().toString().trim();
         String message = messageR.getText().toString().trim();
 
-        Review review = new Review(email, message);
+        if(username.isEmpty()){
+            usernameR.setError("Please enter a username");
+            usernameR.requestFocus();
+            return;
+        }
+
+        if(message.isEmpty()){
+            usernameR.setError("Please enter a review");
+            usernameR.requestFocus();
+            return;
+        }
+
+        Review review = new Review(username, message);
         FirebaseDatabase.getInstance().getReference("Review")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .child(username)
                 .setValue(review).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(RegisterReview.this, "Thanks for your feedback!", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(RegisterReview.this, MainMenu.class));
+                    startActivity(new Intent(RegisterReview.this, ReviewList.class));
                 }
                 else{
                     Toast.makeText(RegisterReview.this, "Failed to Register", Toast.LENGTH_LONG).show();

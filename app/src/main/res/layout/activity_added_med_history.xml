@@ -37,7 +37,7 @@
         android:layout_width="341dp"
         android:layout_height="99dp"
         android:fontFamily="sans-serif"
-        android:text="Your medical history has now been stored within our system. This will be used to gain an understanding into your current health condition"
+        android:text="Your medical history has now been stored within our system. This will be used to gain an understanding into your current health condition."
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

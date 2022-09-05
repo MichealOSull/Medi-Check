@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView registerUser;
+
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextPPS, editTextAddress;
     private FirebaseAuth mAuth;
 
@@ -32,10 +32,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button cancel;
+        Button cancel, registerUser;
 
 
-        registerUser = (Button) findViewById(R.id.registerUser);
+        registerUser = findViewById(R.id.registerUser);
         registerUser.setOnClickListener(this);
         cancel = findViewById(R.id.cancelButton);
         cancel.setOnClickListener(this);
@@ -122,6 +122,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             editTextAddress.requestFocus();
             return;
         }
+
 
 
         mAuth.createUserWithEmailAndPassword(email, password)
